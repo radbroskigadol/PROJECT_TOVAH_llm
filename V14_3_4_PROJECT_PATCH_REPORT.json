@@ -1,0 +1,25 @@
+{
+  "version": "14.3.4",
+  "patch_name": "frontier_hardening",
+  "implemented_findings": [
+    "ScalableBilateralCore init std=0.02",
+    "residual output projection rescaling",
+    "shared vocab head with compact per-position bilateral semantic heads",
+    "semantic K/G calibration instead of hard anti-glut ceiling",
+    "ShadowOptimizer four-buffer compact state with uint8 K/R EMAs",
+    "training-time concentration penalty disabled",
+    "lane D excluded from runtime mixtures unless explicit",
+    "stable bilateral_or accumulation",
+    "differentiable paraconsistent surrogate metrics",
+    "FormalHoTT verifier reward scaffold",
+    "QLoRA/DoRA bilateral adapter scaffold",
+    "Muon optimizer wrapper",
+    "kernel decomposition role modules"
+  ],
+  "not_fully_implemented": [
+    "full parser from model text to FormalHoTT AST",
+    "full LoRA training CLI wiring against a downloaded base model",
+    "full ProtozoanKernel class split; compatibility monolith retained",
+    "production MoE/SSM architecture replacement"
+  ]
+}

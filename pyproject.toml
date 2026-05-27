@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tovah"
+version = "14.3.2a0"
+description = "TOVAH — Contract-First Recursive Growth Engine on ShadowHoTT"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "David N. Betzer"}]
+license = {text = "Proprietary"}
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+]
+dependencies = [
+  "torch>=2.1",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4.0"]
+env = ["python-dotenv>=1.0"]
+advisor = ["openai>=1.0"]
+bpe = ["tokenizers>=0.15"]
+test = ["pytest>=8.0"]
+all = [
+  "pypdf>=4.0",
+  "python-dotenv>=1.0",
+  "openai>=1.0",
+  "tokenizers>=0.15",
+  "pytest>=8.0",
+]
+
+[project.scripts]
+tovah = "tovah_v14.run_tovah:main"
+tovah-eval = "tovah_v14.training.eval:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+  "tovah_v14",
+  "tovah_v14.cluster",
+  "tovah_v14.config",
+  "tovah_v14.conformance",
+  "tovah_v14.core",
+  "tovah_v14.debug",
+  "tovah_v14.evals",
+  "tovah_v14.hott",
+  "tovah_v14.invariants",
+  "tovah_v14.kernel",
+  "tovah_v14.memory",
+  "tovah_v14.modules",
+  "tovah_v14.mutation",
+  "tovah_v14.neural",
+  "tovah_v14.persistence",
+  "tovah_v14.selfmodel",
+  "tovah_v14.tasks",
+  "tovah_v14.tools",
+  "tovah_v14.training",
+  "tovah_v14.training.exporters",
+]
+
+[tool.setuptools.package-dir]
+tovah_v14 = "."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+markers = [
+  "slow: long-running integration/autonomy tests",
+  "autonomy: live kernel/autonomous research-loop tests",
+  "research: tests that exercise research/tool orchestration",
+  "gpu: CUDA-dependent tests",
+  "distributed: multi-process/DDP/FSDP tests",
+]

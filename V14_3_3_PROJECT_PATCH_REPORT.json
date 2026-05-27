@@ -1,0 +1,18 @@
+{
+  "schema": "tovah-v14.3.3-project-zip-patch-report",
+  "patched_at_utc": "2026-05-26T18:06:44Z",
+  "source_zip": "tovah_v14_3_2a_eval_cli_hardened(1).zip",
+  "changes": [
+    "applied additive v14.3.3 loop/support overlay files",
+    "wired loop_stability into tools/uap_shadow_profiles.py loop_drift scoring",
+    "added loop_stability_v14_3_3 summaries to training/shadow_depth_eval.py and training/eval.py",
+    "added optional uap_loop_penalty_weight to training/pretrain.py and run_tovah.py",
+    "added v14.3.3 docs, changelog, diagnostics, and helper tests"
+  ],
+  "conservative_defaults": {
+    "uap_loop_penalty_weight": 0.0,
+    "uap_aux_weight": 0.05,
+    "uap_max_update_rms": 1.0,
+    "uap_trust_clip": 0.0
+  }
+}

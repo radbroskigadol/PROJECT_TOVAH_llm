@@ -1,0 +1,30 @@
+﻿# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Training outputs / weights / checkpoints
+checkpoints/
+outputs/
+runs/
+wandb/
+logs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# Large generated corpora
+tovah_corpus/
+data/
+
+# Local junk
+.DS_Store
+Thumbs.db

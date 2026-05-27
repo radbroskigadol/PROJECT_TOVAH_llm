@@ -1,0 +1,23 @@
+{
+  "version": "14.3.5",
+  "timestamp": 1779822480.188965,
+  "summary": "Verifier/locality/bilateral compute hardening update",
+  "implemented": [
+    "Muon Nesterov + shape-aware LR + ns_steps=3",
+    "metadata-faithful K/G semantic targets",
+    "bilateral negation initialization",
+    "optional Belnap MoE FFN",
+    "FormalHoTT parser/reward/GRPO scaffold",
+    "differentiable sheaf-obstruction regularizer",
+    "bilateral predictive coding helpers",
+    "BilateralDoRA linear adapter",
+    "BilateralSSMBlock prototype",
+    "bilateral univalence and nonabelian twist diagnostics"
+  ],
+  "conservative_defaults": {
+    "uap_sheaf_weight": 0.0,
+    "ffn_kind": "swiglu",
+    "init_bilateral_negation": true,
+    "muon_ns_steps": 3
+  }
+}

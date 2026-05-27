@@ -1,0 +1,21 @@
+# TOVAH v14.2.6 13B reference config.
+# This is a capacity-planning handoff, not a claim that 13B training has been completed.
+name: frontier_13b_fsdp_reference
+profile: frontier_13b
+device: cuda
+dtype: bf16
+optimizer: adamw
+bilateral_mode: shared
+gradient_checkpointing: true
+frontier_semantic_mode: hidden
+use_fsdp: true
+fsdp_mixed_precision: bf16
+batch_size: 1
+grad_accum_steps: 128
+context_len: 4096
+num_workers: 8
+save_sharded: true
+checkpoint: checkpoints/frontier_13b_fsdp
+metrics_path: tovah_metrics/frontier_13b_fsdp.jsonl
+recommended_world_size: 16
+recommended_next_parallelism_pass: "FSDP first; add tensor parallelism or ZeRO-3 if buyer hardware profile requires it."

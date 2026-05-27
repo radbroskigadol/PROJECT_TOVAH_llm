@@ -1,0 +1,18 @@
+# TOVAH v14.2.6 frontier FSDP reference config.
+name: frontier_2b_fsdp_reference
+profile: frontier_2b
+device: cuda
+dtype: bf16
+optimizer: adamw
+bilateral_mode: shared
+gradient_checkpointing: true
+frontier_semantic_mode: hidden
+use_fsdp: true
+fsdp_mixed_precision: bf16
+batch_size: 1
+grad_accum_steps: 32
+max_steps: 10000
+num_workers: 4
+save_sharded: true
+checkpoint: checkpoints/frontier_2b_fsdp
+metrics_path: tovah_metrics/frontier_2b_fsdp.jsonl

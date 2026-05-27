@@ -1,0 +1,14 @@
+# TOVAH v14.2.6 research-scale reference config.
+name: research_50m_to_100m
+profile: large
+device: cuda
+dtype: bf16
+optimizer: shadow
+frontier_semantic_mode: logits
+batch_size: 4
+grad_accum_steps: 4
+max_steps: 1000
+num_workers: 2
+checkpoint: checkpoints/research_50m.pt
+metrics_path: tovah_metrics/research_50m.jsonl
+notes: "Use as a bilateral-logits stability stage before frontier ScalableBilateralCore."

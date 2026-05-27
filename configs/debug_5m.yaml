@@ -1,0 +1,14 @@
+# TOVAH v14.2.6 debug scale config.
+# Reference only; run scripts call equivalent CLI flags directly.
+name: debug_5m
+profile: debug
+device: cpu
+dtype: fp32
+optimizer: shadow
+frontier_semantic_mode: logits
+batch_size: 2
+grad_accum_steps: 1
+max_steps: 5
+num_workers: 0
+checkpoint: checkpoints/debug_5m.pt
+metrics_path: tovah_metrics/debug_5m.jsonl

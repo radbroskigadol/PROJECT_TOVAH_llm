@@ -1,0 +1,22 @@
+{
+  "source": "Pasted text(66).txt",
+  "parseable_json_objects": 1,
+  "observed_model_shadow_depth_max_gen_tokens": 48,
+  "metric_provenance": "model_generated_continuations",
+  "note": "Only 48-token generated probe output was present in the pasted log; no complete 96 or 160 JSON object was present.",
+  "overall": {
+    "shadow_depth_mean": 0.9507666477112676,
+    "collapse_pressure": 0.004895745260483672,
+    "support_profile_consistency": 0.923938869608767,
+    "truth_falsity_calibration": 0.9444268552456835,
+    "loop_drift_behavior": 0.7335673305345733,
+    "contradiction_retention": 0.9876407141139875,
+    "gap_recognition": 0.9758026820865546,
+    "residue_preservation": 0.9857263160825539,
+    "noncollapse_under_gluts": 0.9468166976287525,
+    "backliftability_diagnostics": 0.9462890625
+  },
+  "perplexity": 1.754856918596031,
+  "cross_entropy_nats": 0.5623873257287426,
+  "top1_accuracy": 0.8990538655810623
+}

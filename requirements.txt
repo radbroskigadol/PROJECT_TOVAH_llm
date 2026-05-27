@@ -1,0 +1,19 @@
+# TOVAH v14.2.9 runtime requirements.
+# Install with: pip install -r requirements.txt
+#
+# torch is installed via the upstream wheel index. CPU-only by default; for
+# CUDA, use the appropriate --index-url for your platform.
+torch>=2.1
+requests>=2.31
+# Optional. PDF extraction backend used by INGEST/PDF_STATUS commands.
+pypdf>=4.0; python_version >= "3.10"
+# Optional. Used by run_tovah.py to load .env files.
+python-dotenv>=1.0
+# Optional. Used only when GROK_API_KEY (or compatible) is set.
+openai>=1.0
+# Optional. BPE tokenizer backend (v14.1.2 P1-1). Without it, only the
+# byte-level tokenizer (vocab=256) is available.
+tokenizers>=0.15
+
+# Test dependencies.
+pytest>=8.0
